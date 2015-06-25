@@ -30,8 +30,6 @@ public class UnionPayConstant {
 	public static final String RETURN_MESSAGE = "errorMessage";
 	/***/
 	public static final String RESPONSE_HEAD_DATA = "responseHeadData";
-	/***/
-	public static final String TOTAL_NUM = "totalNum";
 	/**银行标识，用户区分金蝶合作银行*/
 	public static final String TARGET_ID = "targetid";
 	/**用户内码*/
@@ -44,14 +42,6 @@ public class UnionPayConstant {
 	public static final String MESSAGE_ID = "messageid";
 	/**时间*/
 	public static final String DATE_TIME = "datetime";
-	/***/
-	public static final String CARD_NO = "cardNo";
-	/***/
-	public static final String CUST_ID = "custId";
-	/**页码*/
-	public static final String PAGE_NUMBER = "pageNumber";
-	/**分页大小*/
-	public static final String PAGE_SIZE = "pageSize";
 	/**恒丰银行标识符*/
 	public static final String HFB_DC = "HFB_DC";
 
