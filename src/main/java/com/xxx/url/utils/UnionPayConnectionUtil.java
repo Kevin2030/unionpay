@@ -29,17 +29,6 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class UnionPayConnectionUtil {
 
-	/**连接超时时间*/
-	private static final int CONNECTION_TIME_OUT = 50000;
-	/**读取流超时时间*/
-	private static final int READ_TIME_OUT = 300000;
-	/**编码格式UTF-8*/
-	public static final String UTF8 = "utf-8";
-	/**POST*/
-	public static final String POST = "POST";
-	/**换行*/
-	public static final String WRAP = "\n";
-
 	/**
 	 * URL请求
 	 * 
@@ -94,4 +83,15 @@ public class UnionPayConnectionUtil {
 			}
 		}
 	}
+
+	/**连接超时时间*/
+	private static final int CONNECTION_TIME_OUT = 50000;
+	/**读取流超时时间*/
+	private static final int READ_TIME_OUT = 300000;
+	/**编码格式UTF-8*/
+	public static final String UTF8 = "utf-8";
+	/**POST*/
+	public static final String POST = "POST";
+	/**换行*/
+	public static final String WRAP = "\n";
 }

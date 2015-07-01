@@ -21,15 +21,11 @@ package com.xxx.url.config;
 public enum UnionPayType {
 
 	/**查询账户信息*/
-	queryAccountInfo("hfb_accountinfo_query", "查询账户信息");
-	private UnionPayType(String subBizType, String methodName) {
-		this("account");
+	queryAccountInfo("account", "hfb_accountinfo_query", "查询账户信息");
+	private UnionPayType(String bizType, String subBizType, String methodName) {
+		this.bizType = bizType;
 		this.subBizType = subBizType;
 		this.methodName = methodName;
-	}
-
-	private UnionPayType(String bizType) {
-		this.bizType = bizType;
 	}
 
 	/***/

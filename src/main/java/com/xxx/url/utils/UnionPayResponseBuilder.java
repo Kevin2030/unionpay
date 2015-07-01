@@ -35,16 +35,12 @@ public class UnionPayResponseBuilder {
 	 * @see
 	 */
 	public static UnionPayResult buildResponseParams(String result, Class<?> clazz) {
-		UnionPayResult response = new UnionPayResult();
 		if (StringUtils.isBlank(result)) {
-			response.setReturnCode(UnionPayConstant.ReturnCode.FAILURE);
-			response.setReturnMessage(UnionPayConstant.ReturnMessage.SERVICE_ERROR);
-			return response;
+			return UnionPayMessageHandleUtil.buildResult(UnionPayConstant.ReturnCode.FAILURE,
+					UnionPayConstant.ReturnMessage.SERVICE_ERROR);
 		}
-		response.setReturnCode(getReturnCode(result));
-		response.setReturnMessage(getReturnMessage(result));
-		response.setData(getData(result, clazz));
-		return response;
+		return UnionPayMessageHandleUtil.buildResult(getReturnCode(result), getReturnMessage(result),
+				getData(result, clazz));
 	}
 
 	/**
