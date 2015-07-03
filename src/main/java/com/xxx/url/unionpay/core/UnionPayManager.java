@@ -9,15 +9,18 @@
  * 1.0 Kai.Zhao 2015年6月19日 Create
  * 1.1 Kai.Zhao 2015年6月19日 TODO
  */
-package com.xxx.url.utils;
+package com.xxx.url.unionpay.core;
 
 import java.util.HashMap;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.xxx.url.config.UnionPayType;
-import com.xxx.url.model.UnionPayResult;
+import com.xxx.url.unionpay.config.UnionPayResult;
+import com.xxx.url.unionpay.config.UnionPayType;
+import com.xxx.url.unionpay.util.UnionPayConnectionUtil;
+import com.xxx.url.unionpay.util.UnionPayMessageHandleUtil;
+import com.xxx.url.utils.CommonUtil;
 
 /**
  * 银联管理中心

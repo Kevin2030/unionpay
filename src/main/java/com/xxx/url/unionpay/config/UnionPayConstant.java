@@ -9,7 +9,7 @@
  * 1.0 Kai.Zhao 2015年6月24日 Create
  * 1.1 Kai.Zhao 2015年6月24日 TODO
  */
-package com.xxx.url.config;
+package com.xxx.url.unionpay.config;
 
 /**
  * 银联交互常量
@@ -20,17 +20,30 @@ package com.xxx.url.config;
  */
 public class UnionPayConstant {
 
-	/**银企返回数据*/
-	public static final String DATA = "data";
-	/**恒丰虚拟账户*/
-	public static final String E_ACC_NO = "eAccNo";
+	/**
+	 * 恒丰相关
+	 * 
+	 * @author Kai.Zhao
+	 * @version 1.0
+	 * @see
+	 */
+	public class HFConstant {
+
+		/**虚拟账户*/
+		public static final String E_ACC_NO = "eAccNo";
+		/**银行标识符*/
+		public static final String HFB_DC = "HFB_DC";
+	}
+
 	/***/
 	public static final String RETURN_CODE = "returnCode";
 	/***/
 	public static final String RETURN_MESSAGE = "errorMessage";
+	/**银企返回数据*/
+	public static final String DATA = "data";
 	/***/
 	public static final String RESPONSE_HEAD_DATA = "responseHeadData";
-	/**银行标识，用户区分金蝶合作银行*/
+	/**银行标识 区分金蝶合作银行*/
 	public static final String TARGET_ID = "targetid";
 	/**用户内码*/
 	public static final String USER_ID = "userid";
@@ -42,8 +55,6 @@ public class UnionPayConstant {
 	public static final String MESSAGE_ID = "messageid";
 	/**时间*/
 	public static final String DATE_TIME = "datetime";
-	/**恒丰银行标识符*/
-	public static final String HFB_DC = "HFB_DC";
 
 	/**
 	 * 银联返回码
@@ -71,5 +82,4 @@ public class UnionPayConstant {
 		public static final String SERVICE_ERROR = "银企平台异常,请稍候再试!";
 		public static final String REQUEST_PARAMS_EMPTY = "参数错误";
 	}
-
 }

@@ -9,7 +9,7 @@
  * 1.0 Kai.Zhao 2015年6月19日 Create
  * 1.1 Kai.Zhao 2015年6月19日 TODO
  */
-package com.xxx.url.utils;
+package com.xxx.url.unionpay.core;
 
 import java.util.Calendar;
 import java.util.HashMap;
@@ -17,7 +17,8 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 
 import com.alibaba.fastjson.JSONObject;
-import com.xxx.url.config.UnionPayConstant;
+import com.xxx.url.unionpay.config.UnionPayConstant;
+import com.xxx.url.utils.CommonUtil;
 
 /**
  * 银联请求封装
@@ -61,7 +62,7 @@ public class UnionPayRequestBuilder {
 				}
 			}
 		}
-		data.put(UnionPayConstant.TARGET_ID, UnionPayConstant.HFB_DC);
+		data.put(UnionPayConstant.TARGET_ID, UnionPayConstant.HFConstant.HFB_DC);
 		return data;
 	}
 

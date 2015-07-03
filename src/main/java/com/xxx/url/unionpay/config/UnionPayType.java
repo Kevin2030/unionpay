@@ -9,7 +9,7 @@
  * 1.0 Kai.Zhao 2015年6月25日 Create
  * 1.1 Kai.Zhao 2015年6月25日 TODO
  */
-package com.xxx.url.config;
+package com.xxx.url.unionpay.config;
 
 /**
  * 银企业务操作类型

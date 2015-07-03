@@ -9,7 +9,7 @@
  * 1.0 Kai.Zhao 2015年6月19日 Create
  * 1.1 Kai.Zhao 2015年6月19日 TODO
  */
-package com.xxx.url.model;
+package com.xxx.url.unionpay.config;
 
 /**
  * 银联返回结果

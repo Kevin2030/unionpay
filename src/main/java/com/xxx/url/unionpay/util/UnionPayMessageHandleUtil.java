@@ -9,14 +9,14 @@
  * 1.0 Kai.Zhao 2015年6月19日 Create
  * 1.1 Kai.Zhao 2015年6月19日 TODO
  */
-package com.xxx.url.utils;
+package com.xxx.url.unionpay.util;
 
 import org.apache.commons.lang3.StringUtils;
 
 import com.alibaba.fastjson.JSONObject;
 import com.xxx.url.config.CommonConstant;
-import com.xxx.url.config.UnionPayConstant;
-import com.xxx.url.model.UnionPayResult;
+import com.xxx.url.unionpay.config.UnionPayConstant;
+import com.xxx.url.unionpay.config.UnionPayResult;
 
 /**
  * 银联信息处理
