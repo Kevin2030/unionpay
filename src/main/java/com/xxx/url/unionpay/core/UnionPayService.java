@@ -23,15 +23,15 @@ import com.xxx.url.unionpay.util.UnionPayMessageHandleUtil;
 import com.xxx.url.utils.CommonUtil;
 
 /**
- * 银联管理中心
+ * 银联服务中心
  * 
  * @author Kai.Zhao
  * @version 1.0
  * @see
  */
-public class UnionPayManager {
+public class UnionPayService {
 
-	private static final Logger logger = LoggerFactory.getLogger(UnionPayManager.class);
+	private static final Logger logger = LoggerFactory.getLogger(UnionPayService.class);
 
 	/**请求银企地址 FIXME 该地址放在配置文件中*/
 	private static final String REQUEST_URL = "http://172.20.10.48:5289/finance";

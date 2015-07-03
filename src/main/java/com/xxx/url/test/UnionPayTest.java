@@ -18,7 +18,7 @@ import org.junit.Test;
 import com.xxx.url.unionpay.config.UnionPayConstant;
 import com.xxx.url.unionpay.config.UnionPayResult;
 import com.xxx.url.unionpay.config.UnionPayType;
-import com.xxx.url.unionpay.core.UnionPayManager;
+import com.xxx.url.unionpay.core.UnionPayService;
 import com.xxx.url.unionpay.model.AccountInfo;
 import com.xxx.url.utils.MessageHandleUtil;
 
@@ -37,9 +37,9 @@ public class UnionPayTest {
 			String userID = "132929392";
 			String eAccNo = "EA1000000692";
 			params.put(UnionPayConstant.USER_ID, userID);
-			params.put(UnionPayConstant.HFConstant.E_ACC_NO, eAccNo);
+			params.put(UnionPayConstant.E_ACC_NO, eAccNo);
 			// .. 报文封装
-			UnionPayResult result = UnionPayManager.handle(params, userID, UnionPayType.queryAccountInfo,
+			UnionPayResult result = UnionPayService.handle(params, userID, UnionPayType.queryAccountInfo,
 					AccountInfo.class);
 			System.out.println(MessageHandleUtil.buildUnionPayResult(result));
 		} catch (Exception e) {

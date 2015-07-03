@@ -62,7 +62,7 @@ public class UnionPayRequestBuilder {
 				}
 			}
 		}
-		data.put(UnionPayConstant.TARGET_ID, UnionPayConstant.HFConstant.HFB_DC);
+		data.put(UnionPayConstant.TARGET_ID, UnionPayConstant.HFB_DC);
 		return data;
 	}
 

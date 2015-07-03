@@ -80,6 +80,7 @@ public class UnionPayConnectionUtil {
 					br.close();
 				}
 			} catch (IOException e) {
+				// do nothing
 			}
 		}
 	}

@@ -20,21 +20,10 @@ package com.xxx.url.unionpay.config;
  */
 public class UnionPayConstant {
 
-	/**
-	 * 恒丰相关
-	 * 
-	 * @author Kai.Zhao
-	 * @version 1.0
-	 * @see
-	 */
-	public class HFConstant {
-
-		/**虚拟账户*/
-		public static final String E_ACC_NO = "eAccNo";
-		/**银行标识符*/
-		public static final String HFB_DC = "HFB_DC";
-	}
-
+	/**虚拟账户*/
+	public static final String E_ACC_NO = "eAccNo";
+	/**银行标识符*/
+	public static final String HFB_DC = "HFB_DC";
 	/***/
 	public static final String RETURN_CODE = "returnCode";
 	/***/
