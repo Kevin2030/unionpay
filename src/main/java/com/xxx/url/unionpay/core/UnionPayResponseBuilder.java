@@ -9,13 +9,14 @@
  * 1.0 Kai.Zhao 2015年6月19日 Create
  * 1.1 Kai.Zhao 2015年6月19日 TODO
  */
-package com.xxx.url.utils;
+package com.xxx.url.unionpay.core;
 
 import org.apache.commons.lang3.StringUtils;
 
 import com.alibaba.fastjson.JSONObject;
-import com.xxx.url.config.UnionPayConstant;
-import com.xxx.url.model.UnionPayResult;
+import com.xxx.url.unionpay.config.UnionPayConstant;
+import com.xxx.url.unionpay.config.UnionPayResult;
+import com.xxx.url.unionpay.util.UnionPayMessageHandleUtil;
 
 /**
  * 银联返回封装
@@ -56,27 +57,51 @@ public class UnionPayResponseBuilder {
 	}
 
 	/**
-	 * 获取返回码
+	 * 获取返回码<br>
+	 * 1、先从头部获取返回码，如果为空；<br>
+	 * 2、再从body获取返回码，如果也为空；<br>
+	 * 3、默认返回空串
 	 * 
 	 * @param result
 	 * @return
 	 * @see
 	 */
 	private static String getReturnCode(String result) {
-		return JSONObject.parseObject(result).getJSONObject(UnionPayConstant.DATA)
+		String headerReturnCode = JSONObject.parseObject(result).getJSONObject(UnionPayConstant.DATA)
 				.getJSONObject(UnionPayConstant.RESPONSE_HEAD_DATA).getString(UnionPayConstant.RETURN_CODE);
+		if (!StringUtils.isBlank(headerReturnCode)) {
+			return headerReturnCode;
+		}
+		String bodyReturnCode = JSONObject.parseObject(result).getJSONObject(UnionPayConstant.DATA)
+				.getString(UnionPayConstant.RETURN_CODE);
+		if (!StringUtils.isBlank(bodyReturnCode)) {
+			return bodyReturnCode;
+		}
+		return UnionPayConstant.ReturnCode.FAILURE;
 	}
 
 	/**
-	 * 获取返回值
+	 * 获取返回值<br>
+	 * 1、先从头部获取返回值，如果为空；<br>
+	 * 2、再从body获取返回值，如果也为空；<br>
+	 * 3、默认返回空串
 	 * 
 	 * @param result
 	 * @return
 	 * @see
 	 */
 	private static String getReturnMessage(String result) {
-		return JSONObject.parseObject(result).getJSONObject(UnionPayConstant.DATA)
+		String headerReturnMessage = JSONObject.parseObject(result).getJSONObject(UnionPayConstant.DATA)
 				.getJSONObject(UnionPayConstant.RESPONSE_HEAD_DATA).getString(UnionPayConstant.RETURN_MESSAGE);
+		if (!StringUtils.isBlank(headerReturnMessage)) {
+			return headerReturnMessage;
+		}
+		String bodyReturnMessage = JSONObject.parseObject(result).getJSONObject(UnionPayConstant.DATA)
+				.getString(UnionPayConstant.RETURN_MESSAGE);
+		if (!StringUtils.isBlank(bodyReturnMessage)) {
+			return bodyReturnMessage;
+		}
+		return StringUtils.EMPTY;
 	}
 
 }

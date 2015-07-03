@@ -13,7 +13,8 @@ package com.xxx.url.utils;
 
 import com.alibaba.fastjson.JSONObject;
 import com.xxx.url.config.CommonConstant;
-import com.xxx.url.model.UnionPayResult;
+import com.xxx.url.unionpay.config.UnionPayResult;
+import com.xxx.url.unionpay.util.UnionPayMessageHandleUtil;
 
 /**
  * 前端信息处理

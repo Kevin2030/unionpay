@@ -9,7 +9,7 @@
  * 1.0 Kai.Zhao 2015年6月19日 Create
  * 1.1 Kai.Zhao 2015年6月19日 TODO
  */
-package com.xxx.url.utils;
+package com.xxx.url.unionpay.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;

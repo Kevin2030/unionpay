@@ -1,4 +1,4 @@
-package com.xxx.url.model;
+package com.xxx.url.unionpay.model;
 
 import java.io.Serializable;
 import java.util.List;
