@@ -24,21 +24,21 @@ public class UnionPayConstant {
 	public static final String E_ACC_NO = "eAccNo";
 	/**银行标识符*/
 	public static final String HFB_DC = "HFB_DC";
-	/***/
+	/**返回码*/
 	public static final String RETURN_CODE = "returnCode";
-	/***/
+	/**返回值*/
 	public static final String RETURN_MESSAGE = "errorMessage";
 	/**银企返回数据*/
 	public static final String DATA = "data";
-	/***/
+	/**报文头部信息*/
 	public static final String RESPONSE_HEAD_DATA = "responseHeadData";
 	/**银行标识 区分金蝶合作银行*/
 	public static final String TARGET_ID = "targetid";
 	/**用户内码*/
 	public static final String USER_ID = "userid";
-	/***/
+	/**类名*/
 	public static final String BIZ_TYPE = "biztype";
-	/***/
+	/**方法名*/
 	public static final String SUB_BIZ_TYPE = "subbiztype";
 	/**流水号*/
 	public static final String MESSAGE_ID = "messageid";

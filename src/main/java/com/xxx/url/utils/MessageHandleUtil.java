@@ -61,10 +61,9 @@ public class MessageHandleUtil {
 	/**
 	 * 组装银联返回报文
 	 * 
-	 * @param UnionPayResult
+	 * @param result
 	 * @return
-	 * @author Kai.Zhao
-	 * @since 1.0
+	 * @see
 	 */
 	public static String buildUnionPayResult(UnionPayResult result) {
 		if (!UnionPayMessageHandleUtil.isSuccess(result)) {
@@ -76,10 +75,9 @@ public class MessageHandleUtil {
 	/**
 	 * 组装银联失败返回报文
 	 * 
-	 * @param UnionPayResult
+	 * @param result
 	 * @return
-	 * @author Kai.Zhao
-	 * @since 1.0
+	 * @see
 	 */
 	public static String buildUnionPayFailureResult(UnionPayResult result) {
 		JSONObject json = new JSONObject();
@@ -91,10 +89,9 @@ public class MessageHandleUtil {
 	/**
 	 * 组装银联成功返回报文
 	 * 
-	 * @param UnionPayResult
+	 * @param result
 	 * @return
-	 * @author Kai.Zhao
-	 * @since 1.0
+	 * @see
 	 */
 	public static String buildUnionPaySuccessResult(UnionPayResult result) {
 		JSONObject json = new JSONObject();
@@ -107,10 +104,8 @@ public class MessageHandleUtil {
 	/**
 	 * 组装银联服务器异常返回报文
 	 * 
-	 * @param UnionPayResult
 	 * @return
-	 * @author Kai.Zhao
-	 * @since 1.0
+	 * @see
 	 */
 	public static String buildUnionPayServiceErrorResult() {
 		JSONObject json = new JSONObject();
@@ -122,10 +117,8 @@ public class MessageHandleUtil {
 	/**
 	 * 组装服务器异常返回报文
 	 * 
-	 * @param UnionPayResult
 	 * @return
-	 * @author Kai.Zhao
-	 * @since 1.0
+	 * @see
 	 */
 	public static String buildServiceErrorResult() {
 		JSONObject json = new JSONObject();
